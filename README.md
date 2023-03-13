@@ -26,7 +26,7 @@ virtualenv venv
     ```bash
     venv\scripts\activate
     ```
-- #### If you are a UNIX user:
+- #### If you are a Linux/MacOS user:
     ```bash
     source venv/bin/activate
     ```
@@ -38,7 +38,8 @@ pip install -r requirements.txt
 
 ### Run the App
 ```bash
+cd app/
 python manage.py runserver
 ```
 
-The app will be available at `localhost:8000`
+The app will be available at `localhost:8000` and `127.0.0.1:8000`
