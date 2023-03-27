@@ -2,7 +2,7 @@
 
 This project is aimed at developers that can create and discuss
 within rooms about a development topic or problem.<br />
-Users can:
+Users can:<br />
 - register and login,<br />
 - create rooms about a chosen development topic,<br />
 - discuss in the room,<br />
