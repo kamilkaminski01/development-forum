@@ -1,11 +1,11 @@
 # Development Forum
 
 This project is aimed at developers that can create and discuss
-within rooms about a development topic or problem.
+within rooms about a development topic or problem.<br />
 Users can:
-- register and login,
-- create rooms about a chosen development topic,
-- discuss in the room,
+- register and login,<br />
+- create rooms about a chosen development topic,<br />
+- discuss in the room,<br />
 - search rooms about a desired topic.
 
 ### Clone the repository
