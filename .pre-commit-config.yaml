@@ -12,8 +12,8 @@ repos:
 
   - repo: local
     hooks:
-      - id: isort
-        name: isort
+      - id: check
+        name: check
         entry: bash -c 'make check'
         language: system
         require_serial: true
