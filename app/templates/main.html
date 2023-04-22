@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Development Forum</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    {% include "navbar.html" %}
-    {% block content %}
-
-    {% endblock content %}
-</body>
+  </head>
+  <body>
+    {% include "navbar.html" %} {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% block content %} {% endblock content %}
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
 </html>

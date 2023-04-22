@@ -12,3 +12,6 @@ superuser:
 
 check:
 	cd app/ && black . && isort . && mypy . && flake8 .
+
+flush:
+	cd app/ && python manage.py flush
