@@ -7,7 +7,7 @@
       <div class="profile">
         <div class="profile__avatar">
           <div class="avatar avatar--large active">
-            <img src="https://randomuser.me/api/portraits/men/11.jpg" />
+            <img src="{{ user.avatar.url }}" />
           </div>
         </div>
         <div class="profile__info">
@@ -17,6 +17,12 @@
           <a href="{% url 'update-user' %}" class="btn btn--main btn--pill">Edit Profile</a>
           {% endif %}
         </div>
+        {% if user.bio %}
+        <div class="profile__about">
+          <h3>About</h3>
+          <p>{{ user.bio }}</p>
+        </div>
+        {% endif %}
       </div>
       <div class="roomList__header">
         <div>

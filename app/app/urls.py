@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
@@ -18,19 +20,23 @@ from users.views import (
     user_profile_view,
 )
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", home_view, name="home"),
-    path("register/", register_view, name="register"),
-    path("login/", login_view, name="login"),
-    path("logout/", logout_view, name="logout"),
-    path("profile/<int:pk>/", user_profile_view, name="user-profile"),
-    path("create-room/", create_room_view, name="create-room"),
-    path("room/<int:pk>/", room_view, name="room"),
-    path("update-room/<int:pk>/", update_room_view, name="update-room"),
-    path("delete-room/<int:pk>/", delete_room_view, name="delete-room"),
-    path("delete-message/<int:pk>/", delete_message_view, name="delete-message"),
-    path("update-user/", update_user, name="update-user"),
-    path("topics/", topics_view, name="topics"),
-    path("activity/", activity_view, name="activity"),
-]
+urlpatterns = (
+    [
+        path("admin/", admin.site.urls),
+        path("", home_view, name="home"),
+        path("register/", register_view, name="register"),
+        path("login/", login_view, name="login"),
+        path("logout/", logout_view, name="logout"),
+        path("profile/<int:pk>/", user_profile_view, name="user-profile"),
+        path("create-room/", create_room_view, name="create-room"),
+        path("room/<int:pk>/", room_view, name="room"),
+        path("update-room/<int:pk>/", update_room_view, name="update-room"),
+        path("delete-room/<int:pk>/", delete_room_view, name="delete-room"),
+        path("delete-message/<int:pk>/", delete_message_view, name="delete-message"),
+        path("update-user/", update_user, name="update-user"),
+        path("topics/", topics_view, name="topics"),
+        path("activity/", activity_view, name="activity"),
+    ]
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # type: ignore
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # type: ignore
+)

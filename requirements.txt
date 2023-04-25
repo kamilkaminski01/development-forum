@@ -5,4 +5,5 @@ django-stubs==v1.11.0
 flake8==4.0.1
 isort==5.10.1
 mypy==v0.931
+Pillow==9.2.0
 sqlparse==0.4.3

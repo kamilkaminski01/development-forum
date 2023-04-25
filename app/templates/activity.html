@@ -5,7 +5,7 @@
     <div class="layout__box">
       <div class="layout__boxHeader">
         <div class="layout__boxTitle">
-          <a href="{% url 'home' %}">
+          <a href="{{ request.META.HTTP_REFERER }}">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +26,10 @@
           <div class="activities__boxHeader roomListRoom__header">
             <a href="{% url 'user-profile' room_message.user.id %}" class="roomListRoom__author">
               <div class="avatar avatar--small">
-                <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+                <img src="{{ room_message.user.avatar.url }}" />
               </div>
               <p>
-                @{{ room_message.user }}
+                @{{ room_message.user.username }}
                 <span>{{ room_message.created | timesince }} ago</span>
               </p>
             </a>

@@ -1,11 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 
 from replies.models import Replies
 from topics.models import Topic
+from users.models import User
 
 from .forms import RoomForm
 from .models import Room

@@ -2,13 +2,10 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 SECRET_KEY = "django-insecure-u^-t@bx@xs&fu8@(ltahh$&(rk+@k*&wfvy!uy4)v$tvf9h4u="
 
 DEBUG = True
-
 ALLOWED_HOSTS = ["*"]
-
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -72,6 +69,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "users.User"
+
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "UTC"
@@ -81,10 +80,10 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = "static/"
-
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-# STATIC_ROOT =
+MEDIA_URL = "/images/"
+MEDIA_ROOT = BASE_DIR / "static/images"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
