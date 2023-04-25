@@ -13,6 +13,8 @@ class Replies(models.Model):
 
     class Meta:
         ordering = ["-updated", "-created"]
+        verbose_name = "Replies"
+        verbose_name_plural = "Replies"
 
     def __str__(self):
-        return self.body[0:50]
+        return self.body[0:20]
