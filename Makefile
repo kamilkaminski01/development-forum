@@ -18,3 +18,9 @@ flush:
 
 initial-data:
 	cd app/ && python manage.py initialize_data
+
+pytest:
+	cd app/ && python -m pytest
+
+pytest-module:
+	cd app/ && python -m pytest $(module)/
