@@ -181,7 +181,8 @@
       "name": "React, Angular and Vue",
       "description": "How to build frontend user interfaces with popular JS frameworks",
       "updated": "2023-04-19T13:17:15.874Z",
-      "created": "2023-04-19T07:02:16.874Z"
+      "created": "2023-04-19T07:02:16.874Z",
+      "participants": [5, 4, 3]
     }
   },
   {
@@ -193,7 +194,8 @@
       "name": "Django and Laravel",
       "description": "Building backends with python and php frameworks",
       "updated": "2023-04-19T12:10:25.874Z",
-      "created": "2023-04-19T07:02:16.874Z"
+      "created": "2023-04-19T07:02:16.874Z",
+      "participants": [6, 2]
     }
   },
   {
@@ -291,6 +293,61 @@
       "user": 7,
       "room": 3,
       "body": "You can start from installing visual studio",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 10,
+    "fields": {
+      "user": 5,
+      "room": 4,
+      "body": "I think React.js is the best framework",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:15.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 11,
+    "fields": {
+      "user": 4,
+      "room": 4,
+      "body": "I also like React but Vue seems nice too",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 12,
+    "fields": {
+      "user": 3,
+      "room": 4,
+      "body": "I'm also a fan of React",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 13,
+    "fields": {
+      "user": 6,
+      "room": 5,
+      "body": "Django projects should have a requirements file",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 14,
+    "fields": {
+      "user": 2,
+      "room": 5,
+      "body": "Hello guys",
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }

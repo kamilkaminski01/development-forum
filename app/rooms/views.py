@@ -72,7 +72,7 @@ def update_room_view(request: HttpRequest, pk: int) -> HttpResponse:
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
     topics = Topic.objects.all()
-    if request.user != room.host:
+    if not request.user.is_staff and request.user != room.host:
         return HttpResponse("You are not allowed to perform this action")
     if request.method == "POST":
         topic_name = request.POST.get("topic")
@@ -90,7 +90,7 @@ def update_room_view(request: HttpRequest, pk: int) -> HttpResponse:
 @login_required(login_url="login")
 def delete_room_view(request: HttpRequest, pk: int) -> HttpResponse:
     room = Room.objects.get(id=pk)
-    if request.user != room.host:
+    if not request.user.is_staff and request.user != room.host:
         return HttpResponse("You are not allowed to perform this action")
     if request.method == "POST":
         room.delete()

@@ -33,7 +33,7 @@ urlpatterns = (
         path("update-room/<int:pk>/", update_room_view, name="update-room"),
         path("delete-room/<int:pk>/", delete_room_view, name="delete-room"),
         path("delete-message/<int:pk>/", delete_message_view, name="delete-message"),
-        path("update-user/", update_user, name="update-user"),
+        path("update-user/<int:pk>/", update_user, name="update-user"),
         path("topics/", topics_view, name="topics"),
         path("activity/", activity_view, name="activity"),
     ]

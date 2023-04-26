@@ -25,8 +25,8 @@ def user_profile_view(request: HttpRequest, pk: int) -> HttpResponse:
 
 
 @login_required(login_url="login")
-def update_user(request: HttpRequest) -> HttpResponse:
-    user = request.user
+def update_user(request: HttpRequest, pk: int) -> HttpResponse:
+    user = User.objects.get(id=pk)  # type: ignore
     form = UserForm(instance=user)
     if request.method == "POST":
         form = UserForm(request.POST, request.FILES, instance=user)

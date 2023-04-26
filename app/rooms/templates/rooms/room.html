@@ -18,7 +18,7 @@
             </svg>
           </a>
         </div>
-        {% if request.user == room.host %}
+        {% if request.user == room.host or request.user.is_staff %}
         <div class="room__topRight">
           <a href="{% url 'update-room' room.id %}">
             <svg
@@ -93,7 +93,7 @@
                   </a>
                   <span class="thread__date">{{ room_message.created | timesince }} ago</span>
                 </div>
-                {% if request.user == room_message.user %}
+                {% if request.user == room_message.user or request.user.is_staff %}
                 <a href="{% url 'delete-message' room_message.id %}">
                   <div class="thread__delete">
                     <svg
@@ -133,10 +133,7 @@
           <div class="avatar avatar--medium">
             <img src="{{ participant.avatar.url }}" alt="avatar" />
           </div>
-          <p>
-            {{ participant.username }}
             <span>@{{ participant.username }}</span>
-          </p>
         </a>
         {% endfor %}
       </div>
