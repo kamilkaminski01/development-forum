@@ -15,3 +15,6 @@ check:
 
 flush:
 	cd app/ && python manage.py flush
+
+initial-data:
+	cd app/ && python manage.py initialize_data

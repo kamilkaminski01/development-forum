@@ -1,1 +1,298 @@
-[]
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "kamil",
+      "email": "kamil@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "adam",
+      "email": "adam@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "mateusz",
+      "email": "mateusz@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "dorota",
+      "email": "dorota@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "hubert",
+      "email": "hubert@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cQgiZS63wZnG0ZkYAk3aTy$8p06fdm7ackSvfJNvHfkbrgi62Afd0nCJc85W8R3AhA=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "username": "tomasz",
+      "email": "tomasz@user.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "topics.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "topics.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Java"
+    }
+  },
+  {
+    "model": "topics.topic",
+    "pk": 3,
+    "fields": {
+      "name": "C#"
+    }
+  },
+  {
+    "model": "topics.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Frontend Frameworks"
+    }
+  },
+  {
+    "model": "topics.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Backend Frameworks"
+    }
+  },
+  {
+    "model": "rooms.room",
+    "pk": 1,
+    "fields": {
+      "host": 2,
+      "topic": 1,
+      "name": "Lets learn Python",
+      "description": "In this room we will learn about if statements and for loops",
+      "updated": "2023-04-19T09:04:48.874Z",
+      "created": "2023-04-19T07:02:16.874Z",
+      "participants": [2, 4, 7]
+    }
+  },
+  {
+    "model": "rooms.room",
+    "pk": 2,
+    "fields": {
+      "host": 3,
+      "topic": 2,
+      "name": "Learning basic Java",
+      "description": "This room is about learning basic Java syntax",
+      "updated": "2023-04-19T10:03:23.874Z",
+      "created": "2023-04-19T07:02:16.874Z",
+      "participants": [3, 5, 6]
+    }
+  },
+  {
+    "model": "rooms.room",
+    "pk": 3,
+    "fields": {
+      "host": 4,
+      "topic": 3,
+      "name": "Backend development in C#",
+      "description": "Learning how to create a backend in .NET",
+      "updated": "2023-04-19T11:31:28.874Z",
+      "created": "2023-04-19T07:02:16.874Z",
+      "participants": [4, 2, 7]
+    }
+  },
+  {
+    "model": "rooms.room",
+    "pk": 4,
+    "fields": {
+      "host": 5,
+      "topic": 4,
+      "name": "React, Angular and Vue",
+      "description": "How to build frontend user interfaces with popular JS frameworks",
+      "updated": "2023-04-19T13:17:15.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "rooms.room",
+    "pk": 5,
+    "fields": {
+      "host": 6,
+      "topic": 5,
+      "name": "Django and Laravel",
+      "description": "Building backends with python and php frameworks",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "room": 1,
+      "body": "Hello everyone",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 2,
+    "fields": {
+      "user": 4,
+      "room": 1,
+      "body": "Hi, I would like to learn Python with you guys",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 3,
+    "fields": {
+      "user": 7,
+      "room": 1,
+      "body": "Are there any good online courses about Python?",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:18.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "room": 2,
+      "body": "Hey guys, I think the Java syntax is pretty nice comparing it to Python",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "room": 2,
+      "body": "Yes I agree ",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "room": 2,
+      "body": "Actually I like Python syntax",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:18.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 7,
+    "fields": {
+      "user": 4,
+      "room": 3,
+      "body": "How can I start a .NET project?",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:15.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "room": 3,
+      "body": "You can check the documentation",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:16.874Z"
+    }
+  },
+  {
+    "model": "replies.replies",
+    "pk": 9,
+    "fields": {
+      "user": 7,
+      "room": 3,
+      "body": "You can start from installing visual studio",
+      "updated": "2023-04-19T12:10:25.874Z",
+      "created": "2023-04-19T07:02:17.874Z"
+    }
+  }
+]

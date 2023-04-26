@@ -17,12 +17,11 @@ def home_view(request: HttpRequest) -> HttpResponse:
         Q(topic__name__icontains=q) | Q(name__icontains=q) | Q(description__icontains=q)
     )
     topics = Topic.objects.all()[0:5]
-    rooms_count = rooms.count()
-    room_messages = Replies.objects.filter(Q(room__topic__name__icontains=q))
+    room_messages = Replies.objects.filter(Q(room__topic__name__icontains=q))[0:5]
     context = {
         "rooms": rooms,
         "topics": topics,
-        "rooms_count": rooms_count,
+        "rooms_count": rooms.count(),
         "room_messages": room_messages,
     }
     return render(request, "home.html", context)

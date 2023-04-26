@@ -17,5 +17,5 @@ def delete_message_view(request: HttpRequest, pk: int) -> HttpResponse:
 
 
 def activity_view(request: HttpRequest) -> HttpResponse:
-    room_messages = Replies.objects.all()
+    room_messages = Replies.objects.all()[0:5]
     return render(request, "activity.html", {"room_messages": room_messages})

@@ -52,9 +52,8 @@
           </div>
           <div class="activities__boxContent">
             <p>
-              replied to post “<a href="{% url 'room' room_message.room.id %}"
-                >{{ room_message.room }}</a
-              >”
+              replied to thread
+              <a href="{% url 'room' room_message.room.id %}">{{ room_message.room }}</a>
             </p>
             <div class="activities__boxRoomContent">{{ room_message.body }}</div>
           </div>
