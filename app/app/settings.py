@@ -1,11 +1,17 @@
+import os
 from pathlib import Path
+
+from environs import Env
+
+env = Env()
+env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-u^-t@bx@xs&fu8@(ltahh$&(rk+@k*&wfvy!uy4)v$tvf9h4u="
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+DEBUG = env.bool("DEBUG")
 
-DEBUG = True
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["." + host.strip() for host in env.list("ALLOWED_HOSTS")]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -29,6 +35,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")
 
 ROOT_URLCONF = "app.urls"
 
@@ -78,10 +86,15 @@ USE_I18N = True
 USE_TZ = True
 
 
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = ("./app/static",)
+if not os.path.isdir(STATIC_DIR):
+    os.mkdir(STATIC_DIR)
+
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = "/images/"
-MEDIA_ROOT = BASE_DIR / "static/images"
+MEDIA_ROOT = BASE_DIR / "app/static/images"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
