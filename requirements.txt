@@ -1,6 +1,7 @@
 asgiref==3.6.0
 black==22.3.0
 Django==4.1.7
+django-cors-headers==3.10.1
 django-stubs==v1.11.0
 environs==9.5.0
 flake8==4.0.1

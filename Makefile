@@ -2,7 +2,7 @@ build:
 	docker build -t development-forum .
 
 start:
-	docker run -p 8000:8000 --name development-forum development-forum
+	docker run -p 80:8000 --name development-forum development-forum
 
 run:
 	cd app/ && python manage.py runserver

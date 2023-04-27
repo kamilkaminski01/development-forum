@@ -38,6 +38,11 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")
 
+if DEBUG:
+    INSTALLED_APPS.insert(0, "corsheaders")
+    MIDDLEWARE.insert(0, "corsheaders.middleware.CorsMiddleware")
+    CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = "app.urls"
 
 TEMPLATES = [
