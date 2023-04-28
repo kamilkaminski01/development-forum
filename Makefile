@@ -1,8 +1,15 @@
+.PHONY: build start clear run migrations migrate superuser check flush initial-data pytest pytest-module
+
 build:
 	docker build -t development-forum .
 
 start:
-	docker run -p 8000:8000 --name development-forum development-forum
+	docker run -d -p 8000:8000 --name development-forum development-forum
+
+clear:
+	docker stop development-forum || true
+	docker rm development-forum || true
+	docker rmi development-forum || true
 
 run:
 	cd app/ && python manage.py runserver
