@@ -1,4 +1,4 @@
-{% extends "main.html" %} {% block content %}
+{% extends "main.html" %} {% load static %} {% block content %}
 
 <main class="profile-page layout layout--3">
   <div class="container">
@@ -7,7 +7,11 @@
       <div class="profile">
         <div class="profile__avatar">
           <div class="avatar avatar--large active">
+            {% if user.avatar %}
             <img src="{{ user.avatar.url }}" alt="avatar" />
+            {% else %}
+            <img src="{% static 'img/avatar.svg' %}" alt="avatar" />
+            {% endif %}
           </div>
         </div>
         <div class="profile__info">

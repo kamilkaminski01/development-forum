@@ -3,6 +3,12 @@ from typing import List
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 
+from .utils import validate_file_extension
+
+
+def upload_to_avatars(instance, filename: str) -> str:
+    return f"avatars/{instance.id}/{filename}"
+
 
 class UserManager(BaseUserManager):
     use_in_migrations = True
@@ -28,7 +34,12 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
     bio = models.TextField(max_length=200, blank=True, null=True)
-    avatar = models.ImageField(null=True, default="avatar.svg")
+    avatar = models.ImageField(
+        upload_to=upload_to_avatars,
+        validators=[validate_file_extension],
+        null=True,
+        blank=True,
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS: List[str] = []

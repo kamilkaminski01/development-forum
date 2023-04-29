@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
+from django.forms.widgets import FileInput
 
 from .models import User
 
@@ -9,6 +10,7 @@ class UserForm(ModelForm):
     class Meta:
         model = User
         fields = ["avatar", "username", "email", "bio"]
+        widgets = {"avatar": FileInput}
 
 
 class CustomUserCreationForm(UserCreationForm):
