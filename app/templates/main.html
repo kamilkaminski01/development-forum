@@ -11,13 +11,7 @@
     <title>Development Forum</title>
   </head>
   <body>
-    {% include "navbar.html" %} {% if messages %}
-    <ul class="messages">
-      {% for message in messages %}
-      <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %} {% block content %} {% endblock content %}
+    {% include "navbar.html" %} {% block content %} {% endblock content %}
     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

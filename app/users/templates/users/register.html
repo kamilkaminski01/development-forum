@@ -19,6 +19,13 @@
           {% endfor %}
           <button class="btn btn--main" type="submit">Register</button>
         </form>
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
         <div class="auth__action">
           <p>Already signed up?</p>
           <a href="{% url 'login' %}" class="btn btn--link">Sign In</a>

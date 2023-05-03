@@ -1,4 +1,4 @@
-{% extends "main.html" %} {% block content %}
+{% extends "main.html" %} {% load static %} {% block content %}
 
 <main class="layout">
   <div class="container">
@@ -26,7 +26,11 @@
           <div class="activities__boxHeader roomListRoom__header">
             <a href="{% url 'user-profile' room_message.user.id %}" class="roomListRoom__author">
               <div class="avatar avatar--small">
-                <img src="{{ room_message.user.avatar.url }}" />
+                {% if room_message.user.avatar %}
+                <img src="{{ room_message.user.avatar.url }}" alt="avatar" />
+                {% else %}
+                <img src="{% static 'img/avatar.svg' %}" alt="avatar" />
+                {% endif %}
               </div>
               <p>
                 @{{ room_message.user.username }}
