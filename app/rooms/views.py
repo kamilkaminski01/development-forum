@@ -16,6 +16,11 @@ def home_view(request: HttpRequest) -> HttpResponse:
     rooms = Room.objects.filter(
         Q(topic__name__icontains=q) | Q(name__icontains=q) | Q(description__icontains=q)
     )
+    topics = Topic.objects.all()
+    for topic in topics:
+        room_count = topic.room_set.all().count()
+        if room_count == 0:
+            topic.delete()
     topics = Topic.objects.all()[0:5]
     room_messages = Replies.objects.filter(Q(room__topic__name__icontains=q))[0:5]
     context = {
@@ -42,7 +47,7 @@ def room_view(request: HttpRequest, pk: int) -> HttpResponse:
         "room_messages": room_messages,
         "participants": participants,
     }
-    return render(request, "rooms/room.html", context)
+    return render(request, "room.html", context)
 
 
 @login_required(login_url="login")
@@ -64,7 +69,7 @@ def create_room_view(request: HttpRequest) -> HttpResponse:
             )
             return redirect("home")
     context = {"form": form, "topics": topics}
-    return render(request, "rooms/room_form.html", context)
+    return render(request, "room_form.html", context)
 
 
 @login_required(login_url="login")
@@ -84,7 +89,7 @@ def update_room_view(request: HttpRequest, pk: int) -> HttpResponse:
             room.save()
             return redirect("home")
     context = {"form": form, "topics": topics, "room": room}
-    return render(request, "rooms/room_form.html", context)
+    return render(request, "room_form.html", context)
 
 
 @login_required(login_url="login")

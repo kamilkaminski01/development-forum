@@ -33,7 +33,7 @@ def update_user(request: HttpRequest, pk: int) -> HttpResponse:
         if form.is_valid():
             form.save()
             return redirect("user-profile", user.id)
-    return render(request, "users/update-user.html", {"form": form})
+    return render(request, "update-user.html", {"form": form})
 
 
 def register_view(request: HttpRequest) -> HttpResponse:
@@ -48,7 +48,7 @@ def register_view(request: HttpRequest) -> HttpResponse:
             return redirect("home")
         else:
             messages.error(request, "An error occurred during registration")
-    return render(request, "users/register.html", {"form": form})
+    return render(request, "register.html", {"form": form})
 
 
 def login_view(request: HttpRequest) -> HttpResponse:
@@ -68,7 +68,7 @@ def login_view(request: HttpRequest) -> HttpResponse:
                     messages.error(request, "Incorrect email or password")
             else:
                 messages.error(request, "User doesn't exist")
-    return render(request, "users/login.html")
+    return render(request, "login.html")
 
 
 def logout_view(request: HttpRequest) -> HttpResponse:

@@ -2,7 +2,7 @@
 
 <main class="profile-page layout layout--3">
   <div class="container">
-    {% include "topics_component.html" %}
+    {% include "components/topics_component.html" %}
     <div class="roomList">
       <div class="profile">
         <div class="profile__avatar">
@@ -32,9 +32,9 @@
           <h2>Threads Hosted by {{ user.username }}</h2>
         </div>
       </div>
-      {% include "feed_component.html" %}
+      {% include "components/feed_component.html" %}
     </div>
-    {% include "activity_component.html" %}
+    {% include "components/activity_component.html" %}
   </div>
 </main>
 

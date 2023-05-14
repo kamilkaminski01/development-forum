@@ -17,4 +17,4 @@ class Replies(models.Model):
         verbose_name_plural = "Replies"
 
     def __str__(self):
-        return self.body[0:20]
+        return self.body

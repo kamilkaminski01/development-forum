@@ -9,4 +9,4 @@ def topics_view(request: HttpRequest) -> HttpResponse:
     q = request.GET.get("q") if request.GET.get("q") is not None else ""
     topics = Topic.objects.filter(Q(name__icontains=q))
     context = {"topics": topics}
-    return render(request, "topics/topics.html", context)
+    return render(request, "topics.html", context)
