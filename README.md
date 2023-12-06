@@ -34,14 +34,15 @@ virtualenv venv
     source venv/bin/activate
     ```
 
-### Install the dependencies
+### Install the dependencies and make migrations
 ```bash
 pip install -r requirements.txt
+cd app/
+python manage.py migrate
 ```
 
 ### Run the App
 ```bash
-cd app/
 python manage.py runserver
 ```
 
@@ -64,16 +65,21 @@ quality standards are met.
 
 ### Application setup
 
-After running the application, the following actions can be executed:
+After running the application, the following actions can be executed: <br />
 
+Stop the server with `ctrl + c` if it's running <br />
 If you are a UNIX user run:
 ```bash
 make initial-data
 ```
-If you are a Windows user:
+If you are a Windows user: <br />
+make sure you are in the `app/` directory
+
 ```bash
 python manage.py initialize_data
 ```
+Next run the server with `python manage.py runserver`
+
 To initialize the database with example data including:
 
 - global superuser (admin@admin.com)
@@ -97,7 +103,7 @@ default `Admin-123`
 All backend code must be formatted and verified by `black`, `flake8`,
 `mypy` and `isort` tools. Their configurations can be found in the
 [setup.cfg](app/setup.cfg) file. Additionally, `pre-commit`
-[checks](.pre-commit-config.yaml) should performed in order to verify
+[checks](.pre-commit-config.yaml) should be performed in order to verify
 whitespaces, credentials, etc.
 
 Custom functions and methods should use **type hints** to improve IDE code
