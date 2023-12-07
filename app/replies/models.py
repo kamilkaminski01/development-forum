@@ -8,6 +8,7 @@ class Replies(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replies")
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="replies")
     body = models.TextField(max_length=150)
+    accepted = models.BooleanField(default=False)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 

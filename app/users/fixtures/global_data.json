@@ -218,6 +218,7 @@
       "user": 2,
       "room": 1,
       "body": "Hello everyone",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:16.874Z"
     }
@@ -229,6 +230,7 @@
       "user": 4,
       "room": 1,
       "body": "Hi, I would like to learn Python with you guys",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
@@ -240,6 +242,7 @@
       "user": 7,
       "room": 1,
       "body": "Are there any good online courses about Python?",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:18.874Z"
     }
@@ -251,6 +254,7 @@
       "user": 3,
       "room": 2,
       "body": "Hey guys, I think the Java syntax is pretty nice comparing it to Python",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:16.874Z"
     }
@@ -262,6 +266,7 @@
       "user": 5,
       "room": 2,
       "body": "Yes I agree ",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
@@ -273,6 +278,7 @@
       "user": 6,
       "room": 2,
       "body": "Actually I like Python syntax",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:18.874Z"
     }
@@ -284,6 +290,7 @@
       "user": 4,
       "room": 3,
       "body": "How can I start a .NET project?",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:15.874Z"
     }
@@ -295,6 +302,7 @@
       "user": 2,
       "room": 3,
       "body": "You can check the documentation",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:16.874Z"
     }
@@ -306,6 +314,7 @@
       "user": 7,
       "room": 3,
       "body": "You can start from installing visual studio",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
@@ -317,6 +326,7 @@
       "user": 5,
       "room": 4,
       "body": "I think React.js is the best framework",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:15.874Z"
     }
@@ -328,6 +338,7 @@
       "user": 4,
       "room": 4,
       "body": "I also like React but Vue seems nice too",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:16.874Z"
     }
@@ -339,6 +350,7 @@
       "user": 3,
       "room": 4,
       "body": "I'm also a fan of React",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
@@ -350,6 +362,7 @@
       "user": 6,
       "room": 5,
       "body": "Django projects should have a requirements file",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
@@ -361,6 +374,7 @@
       "user": 2,
       "room": 5,
       "body": "Hello guys",
+      "accepted": true,
       "updated": "2023-04-19T12:10:25.874Z",
       "created": "2023-04-19T07:02:17.874Z"
     }
