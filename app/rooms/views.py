@@ -34,14 +34,14 @@ def home_view(request: HttpRequest) -> HttpResponse:
 
 def room_view(request: HttpRequest, pk: int) -> HttpResponse:
     room = Room.objects.get(id=pk)
-    room_messages = room.replies.all()
+    room_messages = room.replies.filter(accepted=True)
     participants = room.participants.all()
     if request.method == "POST":
         if body := request.POST.get("body"):
             if request.user.is_authenticated:
                 Replies.objects.create(user=request.user, room=room, body=body)
                 room.participants.add(request.user)
-                return redirect("room", pk=room.id)
+                return redirect("user-profile", request.user.id)
     context = {
         "room": room,
         "room_messages": room_messages,

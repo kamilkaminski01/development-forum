@@ -6,6 +6,7 @@ from .models import Replies
 class RepliesAdmin(admin.ModelAdmin):
     list_display = [
         "truncated_body",
+        "accepted",
         "user",
         "room",
     ]

@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 
+from replies.models import Replies
 from topics.models import Topic
 
 from .forms import CustomUserCreationForm, UserForm
@@ -12,11 +13,13 @@ from .models import User
 
 def user_profile_view(request: HttpRequest, pk: int) -> HttpResponse:
     user = User.objects.get(id=pk)  # type: ignore
+    replies = Replies.objects.filter(user=user)
     rooms = user.room_host.all()
     room_messages = user.replies.all()
     topics = Topic.objects.all()
     context = {
         "user": user,
+        "replies": replies,
         "rooms": rooms,
         "room_messages": room_messages,
         "topics": topics,
