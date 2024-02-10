@@ -1,13 +1,17 @@
-# Development Forum
+<h1 align="center">Development Forum</h1>
 
 This project is aimed at developers that can create and discuss
 within rooms about a development topic or problem.<br />
+
 Users can:<br />
 - register and login,<br />
 - create rooms and assign an available topic or create one,<br />
 - discuss in the room about the assigned topic,<br />
 - search for rooms by a topic, room name or description,<br />
 - edit their profile.
+
+![demo](https://raw.githubusercontent.com/kamilkaminski01/development-forum/main/app/static/images/demo1.png)
+![demo](https://raw.githubusercontent.com/kamilkaminski01/development-forum/main/app/static/images/demo2.png)
 
 ## Running from sources
 
